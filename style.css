@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    background-image: linear-gradient(to
+    right, #180550, #212da8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.night{
+    height: 70vh;
+    width: 70vw;
+    background-image: url(./assets/Img_1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border: 2px solid #fff;
+    position: relative;
+    overflow-x: hidden;
+    box-shadow: 0px 12px 14px 0px #000;
+}
+
+.road{
+    height: 150px;
+    width: 500%;
+    background-image: url(./assets/Img_02.png);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: block;
+    background-repeat: repeat-x;
+    z-index: 1;
+}
+
+.roadToggle{
+    animation: moveRoad 6s linear infinite;
+}
+
+@keyframes moveRoad {
+    100%{
+        transform: translateX(-2500px);
+    }
+}
+
+.car{
+    position: absolute;
+    bottom: 52px;
+    left: 20%;
+    z-index: 2;
+}
+
+.carSuspension{
+    animation: carMotion 1s linear infinite;
+}
+
+@keyframes carMotion {
+    100%{
+        transform: translateY(-1px);
+    }
+    50%{
+        transform: translateY(1px);
+    }
+    0%{
+        transform: translateY(-1px);
+    }
+}
